@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="A page where you can look up the planets of DragonBall">
+    	<meta name="keywords" content="dragonball, worlds, planets, radar, search">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>DragonBall: Worlds</title>
+
+		<!-- external CSS link -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/planets.css">
+	</head>
+	<body>
+		<section class="search-box">
+			<div class="text-content">
+				<h1 class="bangers">DragonBall: Worlds</h1>
+				<p>Type in a planet</p>
+				<p>List of planets are found <a href="https://docs.google.com/document/d/1F_pj9fiZRe7sYTCvXvi5FIm2IzkGAKCFcyCM3JMtjFk/edit?usp=sharing" target="_blank" rel="noreferrer">here</a></p>
+				<input type="text" name="" value="">
+				<button type="button" class="src-btn" name="button">Get Planet</button>
+			</div>
+		</section>
+
+		<h3 id="planetNotFound"></h3>
+
+		<main class="planet-bio">
+			<h2 class="planet-name bangers">Planet</h2>
+			<img class="planet-pic" src="" alt="">
+			
+			
+			<section class="key-facts">
+				<section class="text">
+					<h2 class="bangers">Bio: <span class="description reg-font"></span></h2>
+					<h2 class="bangers planet-head">Associated Character(s):</h2>
+					<ul class="celest reg-font"></ul>
+				<section>
+			</section>
+		</main>
+		
+		<footer id="footer">
+			<img id="footer-img" src="img/newplanets.avif" alt="DragonBall Cast">
+		</footer>
+
+		<script type="module" src="js/planets.js"></script>
+	</body>
+</html>

@@ -1,0 +1,605 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES + LAYOUT
+/*******************************************/
+body {
+  font-family: "Rubik", sans-serif;
+  /*background-image: url('../img/shenronplaymat.png');*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh; /* makes sure it fills screen */
+}
+
+.bangers {
+  font-family: "Bangers", "Rubik", sans-serif;
+}
+
+/*.description, .gender, .ki, .max-ki,
+.race, .affiliation, .transformation {
+  font-family: "Rubik", sans-serif;
+  font-weight: normal;
+  font-size: 16.5px;
+}*/
+
+/******************************************
+/* HEADER SECTION
+/*******************************************/
+header {
+  background-color: rgb(236, 149, 54);
+  height: 50px;
+}
+
+.head-title {
+  margin: 0;
+  width: 150px;
+  color: white;
+}
+
+.icon {
+  margin: 8.5px 0 0 5px;;
+  width: 25%;
+}
+
+.header-box {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-bar nav {
+  line-height: 1.0;
+}
+
+.nav-box {
+  width: 300px;
+  padding: 0;
+  margin: 13px auto;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+}
+
+.nav-box li {
+  margin-right: 10px;
+}
+
+.nav-button {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #001833;
+  background-color: transparent;
+  vertical-align: middle;
+  color: #001833;
+  text-transform: uppercase;
+  font-size: 14px;
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button:hover {
+  background-color: rgb(201, 42, 40);
+  border: 1px solid rgb(201, 42, 40);
+  color: white; /* or the header background color for contrast */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/**************************************************************
+/* PIC REST & DISCLAIMER
+/**************************************************************/
+.pic-rest {
+  height: 800px;
+  background-image: url('../img/kamehouse.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 30vh; /* makes sure it fills screen */
+}
+
+.pop-title {
+  margin: 0;
+  height: 800px;
+  font-size: 120px;
+  text-align: center;
+  line-height: 6.5;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.75);
+
+  color: #e0e6f8; /* pale silvery blue */
+  text-shadow:
+    0 0 5px #ffffff,
+    0 0 10px #a8c0ff,
+    0 0 20px #91a7ff,
+    0 0 40px #7c8cff;
+  animation: ui-glow 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes ui-glow {
+  from {
+    text-shadow:
+      0 0 3px #ffffff,
+      0 0 6px #a8c0ff,
+      0 0 12px #91a7ff,
+      0 0 24px #7c8cff;
+  }
+  to {
+    text-shadow:
+      0 0 8px #ffffff,
+      0 0 16px #a8c0ff,
+      0 0 32px #91a7ff,
+      0 0 64px #7c8cff;
+  }
+}
+
+.disclaimer {
+  height: 200px;
+  color: rgb(245, 193, 66);
+  background-color: rgb(201, 42, 40);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2)
+}
+
+.disclaimer-content {
+  padding: 0 150px 0 150px;
+}
+
+.disclaimer-content h2 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.disclaimer-content p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.d-content {
+  padding-top: 35px;
+}
+
+
+/******************************************
+/* DEMO AREA
+/*******************************************/
+.demo-area {
+  background-color: rgb(236, 149, 54);
+  height: 550px;
+}
+
+.box-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: auto;
+  background-color: white;
+}
+
+.feature {
+  margin: 1px auto;
+  height: 450px;
+  margin-bottom: 0;   
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feature-content {
+  text-align: center;
+}
+
+.feature img {
+  width: 80%;
+  border: 1px solid #001833;
+  border-radius: 3px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover img {
+  transform: scale(1.05);
+}
+
+.page-describe {
+  padding: 0 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2)
+}
+
+.main-button {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid #001833;
+  background-color: transparent;
+  vertical-align: middle;
+  color: #001833;
+  text-transform: uppercase;
+  font-size: 14px;
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.main-button:hover {
+  background-color: rgb(201, 42, 40);
+  border: 1px solid rgb(201, 42, 40);
+  color: white; /* or the header background color for contrast */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/******************************************
+/* FOOTER
+/*******************************************/
+.background-footer {
+  height: 75px;
+  background-color: rgb(236, 149, 54);
+}
+
+/******************************************************************
+/* MEDIA QUERIES
+/******************************************************************/
+/******************************************
+/* PHONES
+/*******************************************/
+/* Phones (480px and below) */
+@media screen and (max-width: 480px) and (orientation: portrait) {
+  .header-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-box {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+  }
+
+  .nav-box li {
+    display: inline-block; /* keeps nav buttons horizontal */
+    margin: 0 8px;
+  }
+
+  .header-title {
+    display: none;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .pic-rest {
+    height: 300px;
+  }
+
+  .pop-title {
+    height: 200px;
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .disclaimer {
+    height: 420px;
+  }
+
+  .disclaimer-content {
+    padding: 0 50px 0 50px;
+  }
+
+  .demo-area {
+    background-color: white;
+    height: 1202px;
+    padding-top: 35px;
+  }
+
+  .box-container {
+    display: block;
+    justify-content: center;
+  }
+
+  .feature {
+    height: 400px;
+    display: flex;
+  }
+
+  .background-footer {
+    height: 300px;
+    margin-top: 100px;
+  }
+}
+
+/* landscape */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .header-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+  }
+
+  .header-title {
+    width: 50px;
+  }
+
+  .nav-box {
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+    margin: 0 auto;
+  }
+
+  .pic-rest {
+    height: 400px;
+  }
+
+  .pop-title {
+    height: 400px;
+    font-size: 50px;
+    line-height: 8.0;
+    text-align: center;
+  }
+
+  .disclaimer,
+  .disclaimer-content {
+    height: auto;
+    padding: 0 32px;
+  }
+
+  .disclaimer {
+    height: 255px;
+  }
+
+  .demo-area {
+    background-color: white;
+    height: 1503px;
+    padding-top: 35px;
+  }
+
+  .box-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feature {
+    height: 550px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .feature img {
+    width: 80%;
+  }
+
+  .background-footer {
+    height: 300px;
+    margin-top: 250px;
+  }
+}
+
+/******************************************
+/* SMALLER PHONES & SMALL TABLETS
+/*******************************************/
+/* Phones (481px and 699) */
+@media screen and (max-width: 481px) and (max-width: 699px) and (orientation: portrait) {
+  .header-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-box {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+  }
+
+  .nav-box li {
+    display: inline-block; /* keeps nav buttons horizontal */
+    margin: 0 8px;
+  }
+
+  .header-title {
+    display: none;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .pic-rest {
+    height: 300px;
+  }
+
+  .pop-title {
+    height: 200px;
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .disclaimer {
+    height: 420px;
+  }
+
+  .disclaimer-content {
+    padding: 0 50px 0 50px;
+  }
+
+  .demo-area {
+    background-color: white;
+    height: 1202px;
+    padding-top: 35px;
+  }
+
+  .box-container {
+    display: block;
+    justify-content: center;
+  }
+
+  .feature {
+    height: 400px;
+    display: flex;
+  }
+
+  .background-footer {
+    height: 300px;
+    margin-top: 100px;
+  }
+}
+
+
+/******************************************
+/* MINI TABLETS
+/*******************************************/
+/* ipad/mini type tablets (min-width: 700px) and (max-width: 850px) */
+@media screen and (min-width: 700px) and (max-width: 850px) and (orientation: portrait) {
+  .disclaimer {
+    height: 260px;
+  }
+
+  .disclaimer-content {
+    padding: 0 80px 0 80px;
+  }
+
+  .box-container {
+    display: block;
+    justify-content: center;
+  }
+
+  .demo-area {
+    background-color: white;
+    height: 1652px;
+    padding-top: 30px;
+  }
+
+  .feature {
+    height: 550px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .background-footer {
+    height: 300px;
+    margin-top: 75px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  /* Covers iPads 9.7", 10.2", some Minis */
+  .disclaimer {
+    height: 220px;
+  }
+
+  .disclaimer-content {
+    padding: 0 80px 0 80px;
+  }
+
+  .demo-area {
+    background-color: white;
+    height: 2103px;
+    padding-top: 30px;
+  }
+
+  .box-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feature {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .background-footer {
+    height: 300px;
+    margin-top: 75px;
+  }
+}
+
+/******************************************
+/* NEWER TABLETS
+/*******************************************/
+/* Tablets (min-width: 851px and max-width: 1366px) */
+@media screen and (min-width: 851px) and (max-width: 1366px) and (orientation: portrait) {
+  .disclaimer {
+    height: 220px;
+  }
+  
+  .disclaimer-content {
+    padding: 0 80px 0 80px;
+  }
+
+  .box-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .demo-area {
+    background-color: white;
+    height: 2103px;
+    padding-top: 30px;
+  }
+
+  .feature {
+    height: 700px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .background-footer {
+    height: 300px;
+    margin-top: 75px;
+  }
+}
+
+/* Newer iPads Air & iPad Pro 11" */
+@media screen and (min-width: 1025px) and (max-width: 1366px) and (orientation: landscape) {
+  .disclaimer {
+    height: 210px;
+  }
+  
+  .disclaimer-content {
+    padding: 0 80px 0 80px;
+  }
+
+  
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

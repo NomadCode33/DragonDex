@@ -1,0 +1,513 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES + LAYOUT
+/*******************************************/
+body {
+  font-family: "Rubik", sans-serif;
+  background-image: url('../img/combineplanets.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh; /* makes sure it fills screen */
+}
+
+.bangers {
+  font-family: "Bangers", "Rubik", sans-serif;
+}
+
+/*.description, .gender, .ki, .max-ki,
+.race, .affiliation, .transformation {
+  font-family: "Rubik", sans-serif;
+  font-weight: normal;
+  font-size: 16.5px;
+}*/
+
+.reg-font {
+  font-family: "Rubik", sans-serif;
+  font-weight: normal;
+  font-size: 16.5px;
+}
+
+/******************************************
+/* SEARCH BOX
+/*******************************************/
+.search-box {
+  margin: 20px 0 0 20px;
+  border: 2px solid red;
+  border-radius: 10px;
+  width: 30%;
+  height: 200px;
+  background: rgb(244, 187, 68);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.src-btn {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.text-content {
+  padding-bottom: 20px;
+}
+
+/**************************************************************
+/* MAIN
+/**************************************************************/
+.planet-bio {
+  margin-top: 80px;
+}
+
+/******************************************
+/* NAME & PICTURE
+/*******************************************/
+.planet-name {
+  margin: 20px 0 0 20px;
+  margin: 30px auto;
+  text-align: center;
+  border: 2px solid red;
+  border-radius: 10px;
+  width: 25%;
+  background: rgb(244, 187, 68);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.planet-pic {
+  margin: 30px auto;
+  width: 30%;
+  display: block;
+}
+
+/******************************************
+/* CHARACTER NOT FOUND
+/*******************************************/
+#planetNotFound {
+  margin-left: 20px;
+  padding: 7px;
+  text-align: center;
+  border: 2px solid red;
+  border-radius: 10px;
+  width: 30%;
+  height: auto;
+  min-height: auto;
+  background: rgb(244, 187, 68);
+  display: none;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+  /* essential to keep text inside the box */
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/******************************************
+/* KEY FACTS
+/*******************************************/
+.key-facts {
+  margin: 30px auto;
+  margin-top: 50px;
+  border: 2px solid red;
+  border-radius: 10px;
+  width: 70%;
+  height: auto;
+  min-height: auto;
+  background: rgb(244, 187, 68);
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.key-facts .text {
+  flex: 1;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.planet-head {
+  margin-bottom: 0;
+}
+
+/******************************************
+/* FOOTER
+/*******************************************/
+footer {
+  margin-top: 9%;
+}
+
+#footer-img {
+  margin-top: 70px;
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+/******************************************************************
+/* MEDIA QUERIES
+/******************************************************************/
+/******************************************
+/* PHONES
+/*******************************************/
+/* Phones (480px and below) */
+@media screen and (max-width: 480px) and (orientation: portrait) {
+  body {
+    background-image: url('../img/kaioplanet.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    min-height: 100vh;
+  }
+  
+  .search-box {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 90%;
+  }
+
+  #planetNotFound {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .key-facts {
+    flex-direction: column;
+    width: 90%;
+    min-height: auto;
+    height: auto;
+  }
+
+  .key-facts .text {
+    width: 90%;
+    padding: 0 0 0 40px;
+    flex: 1;
+    justify-content: space-evenly;
+  }
+
+  .planet-name {
+    margin: 20px 0 0 20px;
+    margin: 30px auto;
+    width: 75%;
+  }
+
+  .planet-pic {
+    width: 80%;
+  }
+}
+
+/* landscape */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  body {
+    background-image: url('../img/kaioplanet.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    min-height: 100vh;
+  }
+
+  .search-box {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 60%;
+  }
+
+  #planetNotFound {
+    width: 60%;
+    margin: 10px auto;
+  }
+
+  .key-facts {
+    flex-direction: column;
+    width: 55%;
+    min-height: auto;
+    height: auto;
+  }
+
+  .key-facts .text {
+    width: 90%;
+    padding: 0 0 0 40px;
+    flex: 1;
+    justify-content: space-evenly;
+  }
+
+  .planet-name {
+    margin: 20px 0 0 20px;
+    margin: 30px auto;
+    width: 40%;
+  }
+
+  .planet-pic {
+    width: 50%;
+  }  
+}
+
+/******************************************
+/* SMALLER PHONES & SMALL TABLETS
+/*******************************************/
+/* Phones (481px and 699) */
+@media screen and (max-width: 481px) and (max-width: 699px) and (orientation: portrait) {
+  body {
+    background-image: url('../img/kaioplanet.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    min-height: 100vh;
+  }
+  
+  .search-box {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 90%;
+  }
+
+  #planetNotFound {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .key-facts {
+    flex-direction: column;
+    width: 75%;
+    min-height: auto;
+    height: auto;
+  }
+
+  .key-facts .text {
+    width: 90%;
+    padding: 0 0 0 40px;
+    flex: 1;
+    justify-content: space-evenly;
+  }
+
+  .planet-name {
+    margin: 20px 0 0 20px;
+    margin: 30px auto;
+    width: 60%;
+  }
+
+  .planet-pic {
+    width: 80%;
+  }
+}
+
+/******************************************
+/* MINI TABLETS
+/*******************************************/
+/* ipad/mini type tablets (min-width: 700px) and (max-width: 850px) */
+@media screen and (min-width: 700px) and (max-width: 850px) and (orientation: portrait) {
+  body {
+    background-image: url('../img/planetvegetadestroyed.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    min-height: 100vh;
+  }
+  
+  .search-box {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 58%;
+  }
+
+  #planetNotFound {
+    width: 58%;
+    margin: 10px auto;
+  }
+  
+  .planet-name {
+    margin: 20px 0 0 20px;
+    margin: 30px auto;
+    width: 40%;
+  }
+
+  .key-facts {
+    flex-direction: column;
+    width: 90%;
+    min-height: auto;
+    height: auto;
+  }
+
+  .key-facts .text {
+    padding: 0 0 0 40px;
+    flex: 1;
+  }
+
+  .planet-pic {
+    width: 45%;
+  }
+
+  #footer-img {
+    width: 85%;
+  }
+}
+
+/* Covers iPads 9.7", 10.2", some Minis */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  body {
+    background-image: url('../img/planetvegetadestroyed.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    min-height: 100vh;
+  }
+
+  .search-box {
+    margin: 20px 0 0 20px;
+    margin-top: 20px;
+    width: 40%;
+  }
+
+  #planetNotFound {
+    width: 45%;
+    margin-left: 20px;
+  }
+
+  .key-facts {
+    flex-direction: column;
+    width: 90%;
+    min-height: auto;
+    height: auto;
+  }
+
+  .key-facts .text {
+    width: 90%;
+    padding: 0 0 0 40px;
+    flex: 1;
+    justify-content: space-evenly;
+  }
+
+  .planet-name {
+    margin: 20px 0 0 20px;
+    margin: 30px auto;
+    width: 30%;
+  }
+
+  .planet-pic {
+    width: 50%;
+  }  
+}
+
+/******************************************
+/* NEWER TABLETS
+/*******************************************/
+/* Tablets (min-width: 851px and max-width: 1024px) */
+@media screen and (min-width: 851px) and (max-width: 1024px) and (orientation: portrait) {
+  body {
+    background-image: url('../img/gods&cosmos.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    min-height: 100vh;
+  }
+  
+  .search-box {
+    margin-top: 20px;
+    width: 45%;
+  }
+
+  #planetNotFound {
+    width: 45%;
+    margin-left: 20px;
+  }
+
+  .planet-name {
+    margin: 20px 0 0 20px;
+    margin: 30px auto;
+    width: 30%;
+  }
+
+  .key-facts {
+    flex-direction: row;
+    width: 90%;
+    min-height: auto;
+    height: auto;
+  }
+
+  .key-facts .text {
+    padding: 0 40px 0 40px;
+  }
+
+  .planet-pic {
+    width: 40%;
+  }
+}
+
+/* Newer iPads Air & iPad Pro 11" */
+@media screen and (min-width: 1025px) and (max-width: 1366px) and (orientation: landscape) {
+  body {
+    background-image: url('../img/gods&cosmos.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    min-height: 100vh;
+  }
+  
+  .search-box {
+    margin: 20px 0 0 20px;
+    margin-top: 20px;
+    width: 35%;
+  }
+
+  #planetNotFound {
+    width: 35%;
+    margin-left: 20px;
+  }
+
+  .key-facts {
+    flex-direction: column;
+    width: 90%;
+    min-height: auto;
+    height: auto;
+  }
+
+  .key-facts .text {
+    width: 90%;
+    padding: 0 0 0 60px;
+    flex: 1;
+    justify-content: space-evenly;
+  }
+
+  .planet-name {
+    margin: 20px 0 0 20px;
+    margin: 30px auto;
+    width: 25%;
+  }
+
+  .planet-pic {
+    width: 45%;
+  }
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
