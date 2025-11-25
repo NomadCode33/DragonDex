@@ -67,13 +67,19 @@ This allowed users to search using the name they were most familiar with, regard
 I also had to create an english translation for the character bio since it was hard locked to being in Spanish. I first tried to have the description be translated to enlgish once the information pops up when you search the character but it didn't work. So I had to use a different method using the `encodeURIComponent` link from Google Translate to provide a link for it to be translated into english. 
 
 The final optimization I made involved actually fetching the characters correctly. At first, I tried using a query parameter to get the full list of characters: 
-```https://dragonball-api.com/api/characters?limit=58```
+```
+https://dragonball-api.com/api/characters?limit=58
+```
 
 However, this endpoint didn’t return every character the way I expected, so I had to rethink my approach. After revisiting the API structure, I noticed that one of the example links on the website followed a different pattern: 
-```https://dragonball-api.com/api/characters/1```
+```
+https://dragonball-api.com/api/characters/1
+```
 
 The number at the end represented the character’s ID, which matched the IDs used in the main characters endpoint. Once I understood that, it clicked: if each character could be fetched directly by ID, then I could use that pattern to reliably retrieve any character in the database. That’s when the hashmap I created became essential. By mapping each character’s name—across English, Spanish, and Japanese variations—to its corresponding ID, I could dynamically build the correct URL for any search. This led to the final solution: 
-```https://dragonball-api.com/api/characters/${normalizedChoice}```
+```
+https://dragonball-api.com/api/characters/${normalizedChoice}
+```
 
 Using the normalized choice from the hashmap ensured that every character could be fetched properly, regardless of the language the user typed in.
 
