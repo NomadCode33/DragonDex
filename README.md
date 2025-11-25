@@ -69,7 +69,7 @@ This project taught me a lot about how APIs work, especially because the one I u
 Working with an unconventional API pushed me to become more flexible in how I approach data retrieval and problem-solving. The experience gave me a stronger foundation and the confidence to work with a wide range of APIs in future projects. Looking back, the challenges were exactly the training I needed to prepare for more complex and structured APIs down the road.
 
 ## More Projects:
-Take a look at these other projects that I have in my own portfolio:
+Feel free to explore some of my other projects in my portfolio:
 
 **Ayesha Hair Salon:** [Ayesha Hair Salon](https://github.com/NomadCode33/DevChronicles/tree/main/Ayesha-Hair-Salon)
 
