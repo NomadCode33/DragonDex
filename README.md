@@ -60,4 +60,16 @@ Talk about the manuevering about it when I ran into a roadblock
 ## Lessons Learned:
 
 
-## Examples:
+## More Projects:
+Take a look at these other projects that I have in my own portfolio:
+
+**Ayesha Hair Salon:** [Ayesha Hair Salon](https://github.com/NomadCode33/DevChronicles/tree/main/Ayesha-Hair-Salon)
+
+**Level Ground:** [Level Ground](https://github.com/NomadCode33/DevChronicles/tree/main/Level-Ground)
+
+## Repositories
+**Profile:** [NomadCode33](https://github.com/NomadCode33)
+
+**DevChronicles Repository:** [DevChronicles](https://github.com/NomadCode33/DevChronicles)
+
+**Main Repository:** [NomadGeo](https://github.com/NomadCode33/NomadGeo)
