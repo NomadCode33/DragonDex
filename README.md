@@ -44,13 +44,14 @@ And an example of how I structured the character details:
 <section>
 ```
 
-To fetch character data, I used the base API URL and appended the user’s search input using template literals. This allowed me to dynamically request information for whichever character the user typed in. After the request, I stored the response inside a variable called character so it would be easier to reference throughout the script.
-
-From there, I created additional variables to access specific pieces of information—such as the character’s bio, affiliation, race, and so on—using document.querySelector to insert the data into the corresponding sections of the page. Since the character object also contained nested objects for planets and transformations, I broke those out into separate variables as well.
+To fetch character data, I used the base API URL and appended the user’s search input using template literals. This allowed me to dynamically request information for whichever character the user typed in. After the request, I stored the response inside a variable called character so it would be easier to reference throughout the script. From there, I created additional variables to access specific pieces of information—such as the character’s bio, affiliation, race, and so on—using document.querySelector to insert the data into the corresponding sections of the page. Since the character object also contained nested objects for planets and transformations, I broke those out into separate variables as well.
 
 Transformations were stored as an array in the API, so I used a forEach loop to generate and append each transformation to the list dynamically. To keep the UI clean, I also built a helper function that clears all displayed information before rendering new results. This helper function ties into my error handler, so if a user searches for a character that doesn’t exist in the database, the page automatically clears and displays an appropriate error message.
 
 ## Optimizations
+
+
+
 I had to create my own error since the API I used didn't have the normal errors on there
 From that error I realized I was having trouble with getting the error to pop up, until I saw on the DOM itself that it said undefined
 I made a config js file to create a hashmap of all the different search terms. Since the only way to properly search it was in Spanish
@@ -58,7 +59,9 @@ I also had to create code to create a translation for the character bio since it
 Talk about the manuevering about it when I ran into a roadblock
 
 ## Lessons Learned:
+This project taught me a lot about how APIs work, especially because the one I used wasn’t structured like most typical APIs. It lacked some of the usual checks and conventions, which forced me to think differently about my logic and adapt as I went. I ended up learning several new ways to extract and handle data, as well as how to render that information cleanly onto the DOM.
 
+Working with an unconventional API pushed me to become more flexible in how I approach data retrieval and problem-solving. The experience gave me a stronger foundation and the confidence to work with a wide range of APIs in future projects. Looking back, the challenges were exactly the training I needed to prepare for more complex and structured APIs down the road.
 
 ## More Projects:
 Take a look at these other projects that I have in my own portfolio:
