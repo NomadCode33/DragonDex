@@ -98,6 +98,4 @@ Feel free to explore some of my other projects in my portfolio:
 ## Repositories
 **Profile:** [NomadCode33](https://github.com/NomadCode33)
 
-**DevChronicles Repository:** [DevChronicles](https://github.com/NomadCode33/DevChronicles)
-
-**Main Repository:** [NomadGeo](https://github.com/NomadCode33/NomadGeo)
+**Main Repository:** [DevChronicles](https://github.com/NomadCode33/DevChronicles)
