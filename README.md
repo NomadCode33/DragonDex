@@ -46,14 +46,12 @@ And an example of how I structured the character details:
 
 To fetch character data, I used the base API URL and appended the user’s search input using template literals. This allowed me to dynamically request information for whichever character the user typed in. After the request, I stored the response inside a variable called character so it would be easier to reference throughout the script. From there, I created additional variables to access specific pieces of information—such as the character’s bio, affiliation, race, and so on—using document.querySelector to insert the data into the corresponding sections of the page. Since the character object also contained nested objects for planets and transformations, I broke those out into separate variables as well.
 
-Transformations were stored as an array in the API, so I used a forEach loop to generate and append each transformation to the list dynamically. To keep the UI clean, I also built a helper function that clears all displayed information before rendering new results. This helper function ties into my error handler, so if a user searches for a character that doesn’t exist in the database, the page automatically clears and displays an appropriate error message.
+Transformations were stored as an array in the API, so I used a forEach loop to generate and append each transformation to the list dynamically. To keep the UI clean, I also built a helper function that clears all displayed information before rendering new results. This helper function ties into my error handler and the piece of code that pops up to type in a certain amount of characters, so if a user searches for a character that doesn’t exist in the database, the page automatically clears and displays an appropriate error message.
 
 ## Optimizations
+There are a lot of optimizations that I made on this project. The first was that I had to create my own error pop up. The API I used was structured like typical APIs since it was lacking it the usual checks and conventions. Even then I ran into some complications with even getting the error message and prompt to work. I was on the right track that it was tied to the character name, but everything else had me stumped. I was then that I checked the DOM and where it was supposed to show the name, it showed it as undefined. I checked the console on my browser and it had a small blurb and error showing it in a subtle way that the character wasn't in the database. I used my conditonal for the character name that if it equaled undefined, then the error message would pop up. After I did that, it worked. It forced me to reframe my logic into a different lens.
 
 
-
-I had to create my own error since the API I used didn't have the normal errors on there
-From that error I realized I was having trouble with getting the error to pop up, until I saw on the DOM itself that it said undefined
 I made a config js file to create a hashmap of all the different search terms. Since the only way to properly search it was in Spanish
 I also had to create code to create a translation for the character bio since it was hard locked to being in Spanish
 Talk about the manuevering about it when I ran into a roadblock
